@@ -1,5 +1,4 @@
 MAIN="Splash"
-rm *.h slide.png generate "$MAIN.o" "lib$MAIN.so"
 echo "creating generate"
 gcc generate.c -I/core/include/gtk-3.0/ \
                -I /core/include/glib-2.0/ \
@@ -12,7 +11,7 @@ gcc generate.c -I/core/include/gtk-3.0/ \
                -o generate
 if [[ $? == 0 ]] ; then
     if [[ -x generate ]] ; then
-        if [[ ! -f slide.png ]] ; then
+        if [[  -f slide.png ]] ; then
             echo "using users slide"
             gdk-pixbuf-csource --static --stream --name=slide slide.png > slide.h
         elif [[ -f logo.png ]]; then
