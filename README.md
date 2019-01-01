@@ -13,6 +13,9 @@ if want to increase or decrease modify line 39 in Splash.c STEPS
 if slide.png is absent then
   make.sh automatically generate slide using xfce generate binary
 
+### Sample Themes
+i am not a pro artist but i have created some theme as sample in Themes
+just copy theme to /usr/lib/xfce4/session/splash-engines/
 ## How To Make it
 1. copy preview.png , logo.png in the directory
 2. now in Slide.c edit the last 5 lines i.e. theme name, description , author name ,etc
