@@ -12,13 +12,16 @@ gcc generate.c -I/core/include/gtk-3.0/ \
                -o generate
 if [[ $? == 0 ]] ; then
     if [[ -x generate ]] ; then
-            if [[ -f logo.png ]]; then
+        if [[ ! -f slide.png ]] ; then
+            echo "using users slide"
+            gdk-pixbuf-csource --static --stream --name=slide slide.png > slide.h
+        elif [[ -f logo.png ]]; then
                 ./generate logo.png 12
                 gdk-pixbuf-csource --static --stream --name=slide slide.png > slide.h
-            else
+        else
                 echo "no slide.png found"
                 exit
-            fi
+        fi
     else
         echo "no generate found"
         exit
