@@ -1,9 +1,17 @@
 # Xfce4-SplashMaker
 A Simple Script that is based on Xfce4 Mice Splash Engine to make custom splash themes for xfce4
 
-you showld have preview.png logo.png in this directory
+you showld have preview.png logo.png (* slide.png (Optional) )in this directory
 
 now
+
+### slide.png
+image contain horizontally seperated images for animating effects
+default is 12 Frames
+if want to increase or decrease modify line 39 in Splash.c STEPS
+
+if slide.png is absent then
+  make.sh automatically generate slide using xfce generate binary
 
 ## How To Make it
 1. copy preview.png , logo.png in the directory
